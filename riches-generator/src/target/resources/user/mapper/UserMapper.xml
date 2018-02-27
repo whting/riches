@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.jbricks.user.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="cn.jbricks.user.model.User">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="uuid" jdbcType="CHAR" property="uuid" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="user_sign" jdbcType="VARCHAR" property="userSign" />
+    <result column="login_id" jdbcType="VARCHAR" property="loginId" />
+    <result column="passwd" jdbcType="CHAR" property="passwd" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="level" jdbcType="SMALLINT" property="level" />
+    <result column="partner_code" jdbcType="VARCHAR" property="partnerCode" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="last_login" jdbcType="TIMESTAMP" property="lastLogin" />
+    <result column="last_login_from" jdbcType="VARCHAR" property="lastLoginFrom" />
+    <result column="inactive" jdbcType="BIT" property="inactive" />
+    <result column="created_by" jdbcType="VARCHAR" property="createdBy" />
+    <result column="updated_by" jdbcType="VARCHAR" property="updatedBy" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="hold_partner" jdbcType="VARCHAR" property="holdPartner" />
+    <result column="approve_flag" jdbcType="INTEGER" property="approveFlag" />
+    <result column="industry" jdbcType="VARCHAR" property="industry" />
+    <result column="branch" jdbcType="VARCHAR" property="branch" />
+    <result column="agent" jdbcType="VARCHAR" property="agent" />
+    <result column="sale" jdbcType="VARCHAR" property="sale" />
+    <result column="mer_no" jdbcType="VARCHAR" property="merNo" />
+    <result column="department" jdbcType="VARCHAR" property="department" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="cn.jbricks.user.model.User">
+    <result column="app_name" jdbcType="LONGVARCHAR" property="appName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, uuid, gmt_create, gmt_modified, user_sign, login_id, passwd, real_name, level, 
+    partner_code, role, last_login, last_login_from, inactive, created_by, updated_by, 
+    phone, nick_name, gender, description, hold_partner, approve_flag, industry, branch, 
+    agent, sale, mer_no, department
+  </sql>
+  <sql id="Blob_Column_List">
+    app_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from admin_user
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from admin_user
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.jbricks.user.model.User">
+    insert into admin_user (id, uuid, gmt_create, 
+      gmt_modified, user_sign, login_id, 
+      passwd, real_name, level, 
+      partner_code, role, last_login, 
+      last_login_from, inactive, created_by, 
+      updated_by, phone, nick_name, 
+      gender, description, hold_partner, 
+      approve_flag, industry, branch, 
+      agent, sale, mer_no, 
+      department, app_name)
+    values (#{id,jdbcType=BIGINT}, #{uuid,jdbcType=CHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, 
+      #{gmtModified,jdbcType=TIMESTAMP}, #{userSign,jdbcType=VARCHAR}, #{loginId,jdbcType=VARCHAR}, 
+      #{passwd,jdbcType=CHAR}, #{realName,jdbcType=VARCHAR}, #{level,jdbcType=SMALLINT}, 
+      #{partnerCode,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR}, #{lastLogin,jdbcType=TIMESTAMP}, 
+      #{lastLoginFrom,jdbcType=VARCHAR}, #{inactive,jdbcType=BIT}, #{createdBy,jdbcType=VARCHAR}, 
+      #{updatedBy,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{nickName,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{holdPartner,jdbcType=VARCHAR}, 
+      #{approveFlag,jdbcType=INTEGER}, #{industry,jdbcType=VARCHAR}, #{branch,jdbcType=VARCHAR}, 
+      #{agent,jdbcType=VARCHAR}, #{sale,jdbcType=VARCHAR}, #{merNo,jdbcType=VARCHAR}, 
+      #{department,jdbcType=VARCHAR}, #{appName,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.jbricks.user.model.User">
+    insert into admin_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="uuid != null">
+        uuid,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+      <if test="userSign != null">
+        user_sign,
+      </if>
+      <if test="loginId != null">
+        login_id,
+      </if>
+      <if test="passwd != null">
+        passwd,
+      </if>
+      <if test="realName != null">
+        real_name,
+      </if>
+      <if test="level != null">
+        level,
+      </if>
+      <if test="partnerCode != null">
+        partner_code,
+      </if>
+      <if test="role != null">
+        role,
+      </if>
+      <if test="lastLogin != null">
+        last_login,
+      </if>
+      <if test="lastLoginFrom != null">
+        last_login_from,
+      </if>
+      <if test="inactive != null">
+        inactive,
+      </if>
+      <if test="createdBy != null">
+        created_by,
+      </if>
+      <if test="updatedBy != null">
+        updated_by,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="nickName != null">
+        nick_name,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="holdPartner != null">
+        hold_partner,
+      </if>
+      <if test="approveFlag != null">
+        approve_flag,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="branch != null">
+        branch,
+      </if>
+      <if test="agent != null">
+        agent,
+      </if>
+      <if test="sale != null">
+        sale,
+      </if>
+      <if test="merNo != null">
+        mer_no,
+      </if>
+      <if test="department != null">
+        department,
+      </if>
+      <if test="appName != null">
+        app_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="uuid != null">
+        #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userSign != null">
+        #{userSign,jdbcType=VARCHAR},
+      </if>
+      <if test="loginId != null">
+        #{loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="passwd != null">
+        #{passwd,jdbcType=CHAR},
+      </if>
+      <if test="realName != null">
+        #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=SMALLINT},
+      </if>
+      <if test="partnerCode != null">
+        #{partnerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null">
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLogin != null">
+        #{lastLogin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLoginFrom != null">
+        #{lastLoginFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="inactive != null">
+        #{inactive,jdbcType=BIT},
+      </if>
+      <if test="createdBy != null">
+        #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedBy != null">
+        #{updatedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null">
+        #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="holdPartner != null">
+        #{holdPartner,jdbcType=VARCHAR},
+      </if>
+      <if test="approveFlag != null">
+        #{approveFlag,jdbcType=INTEGER},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="branch != null">
+        #{branch,jdbcType=VARCHAR},
+      </if>
+      <if test="agent != null">
+        #{agent,jdbcType=VARCHAR},
+      </if>
+      <if test="sale != null">
+        #{sale,jdbcType=VARCHAR},
+      </if>
+      <if test="merNo != null">
+        #{merNo,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="appName != null">
+        #{appName,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.jbricks.user.model.User">
+    update admin_user
+    <set>
+      <if test="uuid != null">
+        uuid = #{uuid,jdbcType=CHAR},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userSign != null">
+        user_sign = #{userSign,jdbcType=VARCHAR},
+      </if>
+      <if test="loginId != null">
+        login_id = #{loginId,jdbcType=VARCHAR},
+      </if>
+      <if test="passwd != null">
+        passwd = #{passwd,jdbcType=CHAR},
+      </if>
+      <if test="realName != null">
+        real_name = #{realName,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        level = #{level,jdbcType=SMALLINT},
+      </if>
+      <if test="partnerCode != null">
+        partner_code = #{partnerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null">
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="lastLogin != null">
+        last_login = #{lastLogin,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLoginFrom != null">
+        last_login_from = #{lastLoginFrom,jdbcType=VARCHAR},
+      </if>
+      <if test="inactive != null">
+        inactive = #{inactive,jdbcType=BIT},
+      </if>
+      <if test="createdBy != null">
+        created_by = #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updatedBy != null">
+        updated_by = #{updatedBy,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="nickName != null">
+        nick_name = #{nickName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="holdPartner != null">
+        hold_partner = #{holdPartner,jdbcType=VARCHAR},
+      </if>
+      <if test="approveFlag != null">
+        approve_flag = #{approveFlag,jdbcType=INTEGER},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="branch != null">
+        branch = #{branch,jdbcType=VARCHAR},
+      </if>
+      <if test="agent != null">
+        agent = #{agent,jdbcType=VARCHAR},
+      </if>
+      <if test="sale != null">
+        sale = #{sale,jdbcType=VARCHAR},
+      </if>
+      <if test="merNo != null">
+        mer_no = #{merNo,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="appName != null">
+        app_name = #{appName,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="cn.jbricks.user.model.User">
+    update admin_user
+    set uuid = #{uuid,jdbcType=CHAR},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      user_sign = #{userSign,jdbcType=VARCHAR},
+      login_id = #{loginId,jdbcType=VARCHAR},
+      passwd = #{passwd,jdbcType=CHAR},
+      real_name = #{realName,jdbcType=VARCHAR},
+      level = #{level,jdbcType=SMALLINT},
+      partner_code = #{partnerCode,jdbcType=VARCHAR},
+      role = #{role,jdbcType=VARCHAR},
+      last_login = #{lastLogin,jdbcType=TIMESTAMP},
+      last_login_from = #{lastLoginFrom,jdbcType=VARCHAR},
+      inactive = #{inactive,jdbcType=BIT},
+      created_by = #{createdBy,jdbcType=VARCHAR},
+      updated_by = #{updatedBy,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      hold_partner = #{holdPartner,jdbcType=VARCHAR},
+      approve_flag = #{approveFlag,jdbcType=INTEGER},
+      industry = #{industry,jdbcType=VARCHAR},
+      branch = #{branch,jdbcType=VARCHAR},
+      agent = #{agent,jdbcType=VARCHAR},
+      sale = #{sale,jdbcType=VARCHAR},
+      mer_no = #{merNo,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR},
+      app_name = #{appName,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.jbricks.user.model.User">
+    update admin_user
+    set uuid = #{uuid,jdbcType=CHAR},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      user_sign = #{userSign,jdbcType=VARCHAR},
+      login_id = #{loginId,jdbcType=VARCHAR},
+      passwd = #{passwd,jdbcType=CHAR},
+      real_name = #{realName,jdbcType=VARCHAR},
+      level = #{level,jdbcType=SMALLINT},
+      partner_code = #{partnerCode,jdbcType=VARCHAR},
+      role = #{role,jdbcType=VARCHAR},
+      last_login = #{lastLogin,jdbcType=TIMESTAMP},
+      last_login_from = #{lastLoginFrom,jdbcType=VARCHAR},
+      inactive = #{inactive,jdbcType=BIT},
+      created_by = #{createdBy,jdbcType=VARCHAR},
+      updated_by = #{updatedBy,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      nick_name = #{nickName,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      hold_partner = #{holdPartner,jdbcType=VARCHAR},
+      approve_flag = #{approveFlag,jdbcType=INTEGER},
+      industry = #{industry,jdbcType=VARCHAR},
+      branch = #{branch,jdbcType=VARCHAR},
+      agent = #{agent,jdbcType=VARCHAR},
+      sale = #{sale,jdbcType=VARCHAR},
+      mer_no = #{merNo,jdbcType=VARCHAR},
+      department = #{department,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

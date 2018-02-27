@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/module/module-kafka0.8/module-kafka0.8.iml" filepath="$PROJECT_DIR$/module/module-kafka0.8/module-kafka0.8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/riches.iml" filepath="$PROJECT_DIR$/riches.iml" />
+      <module fileurl="file://$PROJECT_DIR$/riches-generator/riches-generator.iml" filepath="$PROJECT_DIR$/riches-generator/riches-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/riches-mvc/riches-mvc.iml" filepath="$PROJECT_DIR$/riches-mvc/riches-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/riches-user/riches-user.iml" filepath="$PROJECT_DIR$/riches-user/riches-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/riches-web/riches-web.iml" filepath="$PROJECT_DIR$/riches-web/riches-web.iml" />
+    </modules>
+  </component>
+</project>

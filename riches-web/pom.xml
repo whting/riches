@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>riches</artifactId>
+        <groupId>cn.jbricks</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>riches-web</artifactId>
+    <packaging>war</packaging>
+    <name>riches-web Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+
+
+    <profiles>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <filterFile>src/main/filter/prod-filter.properties</filterFile>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <filterFile>src/main/filter/test-filter.properties</filterFile>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <filterFile>src/main/filter/dev-filter.properties</filterFile>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.jbricks</groupId>
+            <artifactId>riches-user</artifactId>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <finalName>riches-web</finalName>
+        <filters>
+            <filter>${filterFile}</filter>
+        </filters>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
+    </build>
+</project>

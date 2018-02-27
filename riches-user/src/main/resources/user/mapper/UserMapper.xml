@@ -1,0 +1,22 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.jbricks.user.mapper.UserMapper">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="cn.jbricks.user.model.User">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        `id`,
+        `name`
+    </sql>
+
+    <select id="getUserById" resultMap="AllColumnMap">
+        select
+        <include refid="all_column"/>
+        from t_user
+        where `id`=#{id}
+    </select>
+</mapper>
+

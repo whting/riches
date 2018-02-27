@@ -1,0 +1,5 @@
+cn/jbricks/mvc/model/BaseModel.class
+cn/jbricks/mvc/model/Result.class
+cn/jbricks/mvc/enums/TrueFalseEnum.class
+cn/jbricks/mvc/mybatis/FieldCommentGenerator.class
+cn/jbricks/mvc/enums/ResultCodeEnum.class

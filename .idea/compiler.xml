@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="module-kafka0.8" />
+        <module name="riches-generator" />
+        <module name="riches-mvc" />
+        <module name="riches-user" />
+        <module name="riches-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="module-kafka0.8" target="1.7" />
+      <module name="riches" target="1.5" />
+      <module name="riches-generator" target="1.5" />
+      <module name="riches-mvc" target="1.5" />
+      <module name="riches-user" target="1.5" />
+      <module name="riches-web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

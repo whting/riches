@@ -1,0 +1,5 @@
+cn/jbricks/user/model/User.class
+cn/jbricks/user/service/impl/UserServiceImpl.class
+cn/jbricks/user/controller/UserController.class
+cn/jbricks/user/service/UserService.class
+cn/jbricks/user/mapper/UserMapper.class
