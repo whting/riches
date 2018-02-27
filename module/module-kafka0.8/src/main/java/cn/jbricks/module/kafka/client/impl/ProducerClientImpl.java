@@ -3,6 +3,7 @@ package cn.jbricks.module.kafka.client.impl;
 import cn.jbricks.module.kafka.client.ProducerClient;
 import cn.jbricks.module.kafka.config.ProducerConfig;
 import cn.jbricks.module.kafka.model.Message;
+import com.alibaba.fastjson.JSONObject;
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import org.slf4j.Logger;
@@ -35,15 +36,18 @@ public class ProducerClientImpl implements ProducerClient {
     public void init() {
         Properties props = new Properties();
         props.put("metadata.broker.list", producerConfig.getBrokerList());
-        props.put("request.required.acks", "1");
-        props.put("producer.type", producerConfig.getProducerType());
-        props.put("compression.codec", "0");
-        props.put("batch.num.messages", "20");
-        props.put("queue.buffering.max.messages", "1000");
+        props.put("request.required.acks", "1"); //0：立即返回   1：主服务器收到消息   -1：所有服务器收到返回
+        props.put("producer.type", producerConfig.getProducerType());   //同步／异步
+
+        props.put("batch.num.messages", "20");  //指定每次批量发送数据量，默认为200
+        props.put("queue.buffering.max.messages", "1000");  //producer端允许buffer的最大消息量,默认为10000
+        props.put("queue.buffering.max.ms", "50"); //当message被缓存的时间超过此值后,将会批量发送给broker,默认为5000ms
+        props.put("queue.enqueue.timeout.ms", "-1"); //-1: 无阻塞超时限制,消息不会被抛弃 0:立即清空队列,消息被抛弃
+
         props.put("send.buffer.bytes", "102400");
+        props.put("compression.codec", "0");    //压缩
         props.put("serializer.class", "kafka.serializer.StringEncoder");
         props.put("key.serializer.class", "kafka.serializer.NullEncoder");
-        props.put("queue.buffering.max.ms", "50");
         props.put("num.partitions", "5");
         kafka.producer.ProducerConfig config = new kafka.producer.ProducerConfig(props);
         producer = new Producer<>(config);
@@ -56,15 +60,16 @@ public class ProducerClientImpl implements ProducerClient {
 
     @Override
     public boolean sendMessage(Message message) {
-        byte[] bytes = null;
+        String body = null;
+       // String s = JSONObject.toJSONString(message);
         try {
-            bytes = producerConfig.getMessageConverter().toByte(message);
+            body = producerConfig.getMessageConverter().toString(message);
         } catch (UnsupportedEncodingException e) {
             logger.error("[sendMessage]message convert to byte error", e);
             return false;
         }
         String key = String.valueOf(random.nextLong());
-        KeyedMessage<String, String> keyedMessage = new KeyedMessage(getKafkaTopicWithPrefix(), key, bytes);
+        KeyedMessage<String, String> keyedMessage = new KeyedMessage(getKafkaTopicWithPrefix(), key, body);
         producer.send(keyedMessage);
 
         return true;

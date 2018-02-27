@@ -1,39 +1,53 @@
 package cn.jbricks.module.kafka.handle;
 
+import cn.jbricks.module.kafka.client.impl.ConsumerClientImpl;
 import cn.jbricks.module.kafka.model.Message;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.TypeReference;
-
-import java.io.IOException;
-import java.lang.reflect.ParameterizedType;
-import java.nio.charset.Charset;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @Author: haoting.wang
- * @Date: Created in 下午2:57 2018/2/27
+ * @Date: Created in 上午12:28 2018/2/28
  */
 public abstract class AbstractConsumerHandler<T> implements ConsumerHandler<T> {
 
 
-    @Override
-    public Message<T> parseByte(byte[] data) {
-        String json = new String(data, Charset.forName("utf-8"));
+    private static Logger logger = LoggerFactory.getLogger(AbstractConsumerHandler.class);
 
-        JSONObject jsonObject = JSON.parseObject(json);
-        String msgId = jsonObject.getString("msgId");
-        String key = jsonObject.getString("key");
-        int reconsumeTimes = jsonObject.getInteger("reconsumeTimes");
-        long startDeliverTime = jsonObject.getLong("startDeliverTime");
-        JSONObject object = jsonObject.getJSONObject("model");
-        T model = JSONObject.toJavaObject(object, getGenericType());
+    private long retryInterval = 500l;
 
-        Message<T> message = new Message(msgId,key,model,reconsumeTimes,startDeliverTime);
-        return message;
+
+    public boolean isRetry(int count) {
+        if (count < 3) {
+            return true;
+        }
+        return false;
     }
 
-    public Class<T> getGenericType() {
-        Class<T> clz = (Class<T>) (((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0]);
-        return clz;
+    @Override
+    public boolean retry(Message message) {
+        int count = 0;
+        while (isRetry(count)){
+            waitMoment();
+            count++;
+            logger.info("waring kafka consumer message={},retry={}", JSON.toJSONString(message), count);
+            try {
+                consumer(message);
+            }catch (Exception e){
+                continue;
+            }
+            return true;
+        }
+        logger.error("kafka consumer error message={}", JSON.toJSONString(message));
+        return false;
+
+    }
+
+    private void waitMoment() {
+        try {
+            Thread.sleep(retryInterval);
+        } catch (InterruptedException e) {
+        }
     }
 }

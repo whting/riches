@@ -32,7 +32,7 @@ public class ProducerClientTest {
 
         producerClient.sendMessage(message);
 
-        Thread.sleep(100000L);
+        Thread.sleep(1000L);
     }
 
     @Test
@@ -46,7 +46,7 @@ public class ProducerClientTest {
         for(int i = 0;i<100;i++){
             producerClient.sendMessage(message);
         }
-
+        Thread.sleep(10000L);
     }
 
 

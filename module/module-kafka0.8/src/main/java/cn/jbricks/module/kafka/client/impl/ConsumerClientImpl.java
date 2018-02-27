@@ -4,7 +4,6 @@ import cn.jbricks.module.kafka.client.ConsumerClient;
 import cn.jbricks.module.kafka.config.ConsumerConfig;
 import cn.jbricks.module.kafka.handle.ConsumerHandler;
 import cn.jbricks.module.kafka.model.Message;
-import com.alibaba.fastjson.JSON;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
@@ -38,11 +37,7 @@ public class ConsumerClientImpl implements ConsumerClient {
 
     private ConsumerConnector consumerConnector;
 
-    private KafkaStream<byte[], byte[]> kafkaStream;
-
     private ConsumerHandler consumerHandler;
-
-    private static long retryInterval = 1000;
 
     private static int threadCount = Runtime.getRuntime().availableProcessors();
     // 给线程取名
@@ -79,31 +74,10 @@ public class ConsumerClientImpl implements ConsumerClient {
     }
 
     private void onMessage(Message message) {
-        int count = 0;
-        while (true) {
-            try {
-                consumerHandler.consumer(message);
-                return;
-            } catch (Exception e) {
-                if (consumerConfig.isRetry(count)) {
-                    waitMoment();
-                    count++;
-                    logger.info("waring kafka consumer message={},retry={}", JSON.toJSONString(message), count);
-                    continue;
-                } else {
-                    logger.error("kafka consumer error message={}", JSON.toJSONString(message));
-                    return;
-                }
-            }
-
-        }
-
-    }
-
-    private void waitMoment() {
         try {
-            Thread.sleep(retryInterval);
-        } catch (InterruptedException e) {
+            consumerHandler.consumer(message);
+        } catch (Exception e) {
+            consumerHandler.retry(message);
         }
     }
 
@@ -154,15 +128,15 @@ public class ConsumerClientImpl implements ConsumerClient {
                     logger.warn("Received empty message, ignoring");
                     return;
                 }
-                try{
+                Message msg = null;
+                try {
 
                     ParameterizedType parameterizedType = (ParameterizedType) consumerHandler.getClass().getGenericSuperclass();
-                    consumerConfig.getMessageConverter().toObject(message, (Class) parameterizedType.getActualTypeArguments()[0]);
+                    msg = (Message) consumerConfig.getMessageConverter().toObject(message, (Class) parameterizedType.getActualTypeArguments()[0]);
 
                 } catch (IOException e) {
                     logger.error("[consume]message convert to object error", e);
                 }
-                Message msg = consumerHandler.parseByte(message);
                 onMessage(msg);
             }
         }

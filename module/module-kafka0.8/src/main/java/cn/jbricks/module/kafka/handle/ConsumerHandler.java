@@ -8,9 +8,10 @@ import cn.jbricks.module.kafka.model.Message;
  */
 public interface ConsumerHandler<T> {
 
-    public void consumer(Message<T> message);
+    void consumer(Message<T> message);
 
-    public abstract Message<T> parseByte(byte[] data);
+    boolean isRetry(int count);
 
+    boolean retry(Message message);
 
 }

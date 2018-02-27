@@ -19,11 +19,11 @@ public class JsonMessageConverter implements MessageConverter {
     public static final Logger logger = LoggerFactory.getLogger(JsonMessageConverter.class);
 
     @Override
-    public byte[] toByte(Object object) throws UnsupportedEncodingException {
+    public String toString(Object object) throws UnsupportedEncodingException {
 
         String jsonData = JSON.toJSONString(object);
 
-        return jsonData.getBytes("utf-8");
+        return jsonData;
     }
 
     @Override
@@ -37,8 +37,8 @@ public class JsonMessageConverter implements MessageConverter {
         int reconsumeTimes = jsonObject.getInteger("reconsumeTimes");
         long startDeliverTime = jsonObject.getLong("startDeliverTime");
         JSONObject object = jsonObject.getJSONObject("model");
-        Object model = JSONObject.toJavaObject(object, clazz);
 
+        Object model = JSONObject.toJavaObject(object, clazz);
         Message message = new Message(msgId,key,model,reconsumeTimes,startDeliverTime);
         return message;
     }

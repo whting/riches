@@ -15,6 +15,7 @@ public class UserConsumerHandler extends AbstractConsumerHandler<User> {
     public void consumer(Message<User> message) {
         User model = message.getModel();
         System.out.println(model.getName());
+        throw new RuntimeException();
     }
 
 }
