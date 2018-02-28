@@ -7,108 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ffedd79-08c6-441c-b24f-0759c6b073c5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/ProducerClient.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/ProducerClient.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/config/ConsumerConfig.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/config/ConsumerConfig.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/kafka.xml" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/kafka.xml" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/ConsumerClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/ProducerClient.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl$KafkaConsumerThread.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/config/ConsumerConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/config/ProducerConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/convert/MessageConverter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/handle/ConsumerHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/model/Message.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/handler/UserConsumerHandler.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/model/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/test/ProducerClientTest.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/kafka.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/classes/cn/jbricks/App.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/classes/cn/jbricks/generator/mybatis/FieldCommentGenerator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/classes/dal/generator-config_user.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/classes/dal/init.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/classes/generatorConfig.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/maven-archiver/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-generator/target/riches-generator-1.0-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/classes/cn/jbricks/mvc/enums/ResultCodeEnum.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/classes/cn/jbricks/mvc/enums/TrueFalseEnum.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/classes/cn/jbricks/mvc/model/BaseModel.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/classes/cn/jbricks/mvc/model/Result.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/classes/cn/jbricks/mvc/mybatis/FieldCommentGenerator.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/maven-archiver/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-mvc/target/riches-mvc-1.0-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/cn/jbricks/user/controller/UserController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/cn/jbricks/user/mapper/UserMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/cn/jbricks/user/model/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/cn/jbricks/user/service/UserService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/cn/jbricks/user/service/impl/UserServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/user/beans.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/user/dal-mybatis.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/classes/user/mapper/UserMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/maven-archiver/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-user/target/riches-user-1.0-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/classes/beans.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/classes/datasource.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/maven-archiver/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web.war" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/classes/beans.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/classes/datasource.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/aspectjweaver-1.8.7.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-beanutils-1.7.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-codec-1.7.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-collections4-4.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-fileupload-1.2.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-jxpath-1.3.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-lang3-3.3.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/druid-1.0.0.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/fastjson-1.2.8.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/jcl-over-slf4j-1.7.21.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/logback-classic-1.1.7.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/logback-core-1.1.7.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/mybatis-3.2.6.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/mybatis-generator-core-1.3.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/mybatis-spring-1.2.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/mysql-connector-java-5.1.26.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/riches-mvc-1.0-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/riches-user-1.0-SNAPSHOT.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/slf4j-api-1.7.21.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-aop-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-aspects-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-beans-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-context-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-context-support-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-core-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-expression-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-jdbc-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-jms-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-messaging-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-orm-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-test-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-tx-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-web-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/lib/spring-webmvc-4.2.2.RELEASE.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/spring-context.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/spring-servlet.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/riches-web/target/riches-web/index.jsp" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -150,11 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -176,18 +85,6 @@
             <state relative-caret-position="411">
               <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProducerClientTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -386,6 +283,7 @@
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/kafka.xml" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -739,7 +637,7 @@
       <option name="presentableId" value="Default" />
       <updated>1519626211709</updated>
       <workItem from="1519626216232" duration="10624000" />
-      <workItem from="1519659243802" duration="20750000" />
+      <workItem from="1519659243802" duration="20909000" />
     </task>
     <task id="LOCAL-00001" summary="kafka 框架init">
       <created>1519750704091</created>
@@ -748,7 +646,21 @@
       <option name="project" value="LOCAL" />
       <updated>1519750704091</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="git  删除class">
+      <created>1519789769021</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519789769021</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ad  gitignore">
+      <created>1519789853103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1519789853103</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -784,7 +696,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31374000" />
+    <option name="totallyTimeSpent" value="31533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -857,7 +769,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kafka 框架init" />
-    <option name="LAST_COMMIT_MESSAGE" value="kafka 框架init" />
+    <MESSAGE value="git  删除class" />
+    <MESSAGE value="ad  gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="ad  gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -903,13 +817,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/riches-web/src/main/resources/datasource.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
@@ -1455,8 +1362,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
