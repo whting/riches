@@ -1,6 +1,5 @@
 package cn.jbricks.module.kafka.consumer.impl;
 
-import cn.jbricks.module.kafka.client.impl.ConsumerClientImpl;
 import cn.jbricks.module.kafka.model.Message;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import kafka.consumer.ConsumerIterator;
@@ -21,18 +20,16 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
 /**
+ * kafka消费者，此消费者分区有序。根据分区消费，每个分区一个消费线程
+ *
  * @Author: haoting.wang
  * @Date: Created in 下午2:21 2018/2/28
  */
 public class PartitionConsumer extends KafkaConsumer {
 
 
-    private static Logger logger = LoggerFactory.getLogger(ConsumerClientImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(PartitionConsumer.class);
 
-    // 给线程取名
-    private static ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("PartitionConsumer-%d").setDaemon(true).build();
-
-    private ExecutorService executor;
 
     @PostConstruct
     public void init() {

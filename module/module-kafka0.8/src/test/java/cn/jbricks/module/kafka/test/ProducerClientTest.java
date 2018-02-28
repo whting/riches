@@ -1,7 +1,5 @@
 package cn.jbricks.module.kafka.test;
 
-import cn.jbricks.module.kafka.client.ConsumerClient;
-import cn.jbricks.module.kafka.client.ProducerClient;
 import cn.jbricks.module.kafka.model.Message;
 import cn.jbricks.module.kafka.model.User;
 import cn.jbricks.module.kafka.producer.Producer;

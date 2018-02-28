@@ -17,7 +17,7 @@ public class ConsumerConfig {
 
     private String  zkSyncTimeMs     = "1000";
 
-    private int threadCount = 1;
+    private int threadCount = 4;
 
     private MessageConverter messageConverter;
 

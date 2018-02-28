@@ -4,10 +4,12 @@ import cn.jbricks.module.kafka.config.ConsumerConfig;
 import cn.jbricks.module.kafka.consumer.Consumer;
 import cn.jbricks.module.kafka.handle.ConsumerHandler;
 import cn.jbricks.module.kafka.model.Message;
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import kafka.javaapi.consumer.ConsumerConnector;
 
 import javax.annotation.PreDestroy;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadFactory;
 
 /**
  * @Author: haoting.wang
@@ -24,6 +26,9 @@ public abstract class KafkaConsumer implements Consumer {
     protected ConsumerHandler consumerHandler;
 
     protected ExecutorService executor;
+
+    // 给线程取名
+    protected ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat(this.getClass().getSimpleName()+"-%d").setDaemon(true).build();
 
     @PreDestroy
     public void shutdown() {

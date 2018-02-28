@@ -75,7 +75,7 @@ public class KafkaProducer implements Producer {
             logger.error("[sendMessage]message convert to byte error", e);
             return false;
         }
-        KeyedMessage<String, String> keyedMessage = new KeyedMessage(getKafkaTopicWithPrefix(), body);
+        KeyedMessage<String, String> keyedMessage = new KeyedMessage(getKafkaTopicWithPrefix(),key, body);
 
         producer.send(keyedMessage);
 

@@ -34,11 +34,13 @@
     </bean>-->
 
 
-    <bean class="cn.jbricks.module.kafka.consumer.impl.PartitionConsumer" name="consumerClient">
+    <bean class="cn.jbricks.module.kafka.consumer.impl.BulkConsumer" name="consumerClient">
         <property name="consumerConfig" ref="consumerConfig" />
         <property name="topic" value="user5" />
         <property name="consumerHandler" ref="userConsumerHandler" />
     </bean>
+
+
 
     <bean class="cn.jbricks.module.kafka.config.ConsumerConfig" name="consumerConfig">
         <property name="groupId" value="group" />

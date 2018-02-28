@@ -1,8 +1,6 @@
 package cn.jbricks.module.kafka.consumer.impl;
 
-import cn.jbricks.module.kafka.client.impl.ConsumerClientImpl;
 import cn.jbricks.module.kafka.model.Message;
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import kafka.consumer.KafkaStream;
 import kafka.message.MessageAndMetadata;
 import org.slf4j.Logger;
@@ -15,26 +13,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadFactory;
 
 /**
+ * kafka消费者，此消费者单线程拉取数据，取一个就交给线程池处理。个人不推荐价使用
+ *
  * @Author: haoting.wang
  * @Date: Created in 下午2:22 2018/2/28
  */
 public class AsyncConsumer extends KafkaConsumer implements Runnable {
 
-    private static Logger logger = LoggerFactory.getLogger(ConsumerClientImpl.class);
+    private static Logger logger = LoggerFactory.getLogger(AsyncConsumer.class);
 
     private KafkaStream<byte[], byte[]> kafkaStream;
 
-    private static ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("PartitionConsumer-%d").setDaemon(true).build();
-
-    private static ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), threadFactory);;
-
     @PostConstruct
     public void init() {
+
+        executor = Executors.newFixedThreadPool(consumerConfig.getThreadCount(), threadFactory);
 
         Properties props = new Properties();
         props.put("zookeeper.connect", consumerConfig.getZookeeperHost());
