@@ -15,9 +15,11 @@ public abstract class AbstractConsumerHandler<T> implements ConsumerHandler<T> {
 
     private static Logger logger = LoggerFactory.getLogger(AbstractConsumerHandler.class);
 
-    private static long RETRY_INTERVAL = 50l;
+    private long RETRY_INTERVAL = 50l;
 
-    private static int RETRY_COUNT = 3;
+    private int RETRY_COUNT = 3;
+
+    private boolean retryEnable = true;
 
 
     public boolean isRetry(int count) {
@@ -30,7 +32,7 @@ public abstract class AbstractConsumerHandler<T> implements ConsumerHandler<T> {
     @Override
     public boolean retry(Message message) {
         int count = 0;
-        while (isRetry(count)){
+        while (retryEnable && isRetry(count)){
             waitMoment();
             count++;
             logger.info("waring kafka consumer message={},retry={}", JSON.toJSONString(message), count);

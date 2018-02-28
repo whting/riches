@@ -4,6 +4,8 @@ import cn.jbricks.module.kafka.client.ConsumerClient;
 import cn.jbricks.module.kafka.client.ProducerClient;
 import cn.jbricks.module.kafka.model.Message;
 import cn.jbricks.module.kafka.model.User;
+import cn.jbricks.module.kafka.producer.Producer;
+import cn.jbricks.module.kafka.producer.impl.KafkaProducer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ProducerClientTest {
 
     @Autowired
-    private ProducerClient producerClient;
+    private Producer producerClient;
 
 
     @Test
@@ -47,7 +49,7 @@ public class ProducerClientTest {
             user.setName(i+"");
             producerClient.sendMessage(message);
         }
-        Thread.sleep(10000L);
+        Thread.sleep(3000L);
     }
 
 
