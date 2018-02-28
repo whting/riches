@@ -8,12 +8,6 @@
        default-autowire="byName">
 
 
-
-   <!-- <bean class="cn.jbricks.module.kafka.client.impl.ProducerClientImpl" name="producerClient">
-        <property name="producerConfig" ref="producerConfig"/>
-        <property name="topic" value="user5" />
-    </bean>-->
-
     <bean class="cn.jbricks.module.kafka.producer.impl.KafkaProducer" name="producerClient">
         <property name="producerConfig" ref="producerConfig"/>
         <property name="topic" value="user5" />
@@ -27,20 +21,11 @@
     </bean>
 
 
-   <!-- <bean class="cn.jbricks.module.kafka.client.impl.ConsumerClientImpl" name="consumerClient">
-        <property name="consumerConfig" ref="consumerConfig" />
-        <property name="topic" value="user5" />
-        <property name="consumerHandler" ref="userConsumerHandler" />
-    </bean>-->
-
-
     <bean class="cn.jbricks.module.kafka.consumer.impl.BulkConsumer" name="consumerClient">
         <property name="consumerConfig" ref="consumerConfig" />
         <property name="topic" value="user5" />
         <property name="consumerHandler" ref="userConsumerHandler" />
     </bean>
-
-
 
     <bean class="cn.jbricks.module.kafka.config.ConsumerConfig" name="consumerConfig">
         <property name="groupId" value="group" />
