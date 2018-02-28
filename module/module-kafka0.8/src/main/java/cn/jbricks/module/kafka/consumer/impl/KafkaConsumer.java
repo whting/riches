@@ -28,7 +28,7 @@ public abstract class KafkaConsumer implements Consumer {
     protected ExecutorService executor;
 
     // 给线程取名
-    protected ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat(this.getClass().getSimpleName()+"-%d").setDaemon(true).build();
+    protected ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat(this.getClass().getSimpleName() + "-%d").setDaemon(true).build();
 
     @PreDestroy
     public void shutdown() {

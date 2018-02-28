@@ -1,7 +1,6 @@
 package cn.jbricks.module.kafka.consumer.impl;
 
 import cn.jbricks.module.kafka.model.Message;
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.message.MessageAndMetadata;
@@ -15,9 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadFactory;
 
 /**
  * kafka消费者，此消费者分区有序。根据分区消费，每个分区一个消费线程

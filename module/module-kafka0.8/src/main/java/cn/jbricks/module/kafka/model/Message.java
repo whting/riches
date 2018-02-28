@@ -3,18 +3,20 @@ package cn.jbricks.module.kafka.model;
 import java.io.Serializable;
 
 /**
+ * 消息传递对象
+ * <p>
  * Created by haoting.wang on 17/2/28.
  */
 public class Message<T> implements Serializable {
 
     private String msgId;
     private String key;             // 消息对应的业务实体的id
-    private T      model;
+    private T model;
 
-    private int    reconsumeTimes;
-    private long   startDeliverTime;
+    private int reconsumeTimes;
+    private long startDeliverTime;
 
-    public Message(){
+    public Message() {
     }
 
     public Message(String msgId, String key, T model, int reconsumeTimes, long startDeliverTime) {

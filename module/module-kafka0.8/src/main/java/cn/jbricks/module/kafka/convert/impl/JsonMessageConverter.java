@@ -4,8 +4,6 @@ import cn.jbricks.module.kafka.convert.MessageConverter;
 import cn.jbricks.module.kafka.model.Message;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -38,7 +36,7 @@ public class JsonMessageConverter implements MessageConverter {
         JSONObject object = jsonObject.getJSONObject("model");
 
         Object model = JSONObject.toJavaObject(object, clazz);
-        Message message = new Message(msgId,key,model,reconsumeTimes,startDeliverTime);
+        Message message = new Message(msgId, key, model, reconsumeTimes, startDeliverTime);
         return message;
     }
 }
