@@ -51,6 +51,7 @@ public class ConsumerClientImpl implements ConsumerClient {
         props.put("zookeeper.connect", consumerConfig.getZookeeperHost());
         props.put("group.id", consumerConfig.getGroupId());
         props.put("zookeeper.session.timeout.ms", consumerConfig.getZkSessionTimeout());
+        // props.put("auto.commit.interval.ms", "1000");  //定期提交offset，默认10000
         // props.put("zookeeper.sync.time.ms", consumerConfig.getZkSyncTimeMs());
         kafka.consumer.ConsumerConfig config = new kafka.consumer.ConsumerConfig(props);
 
@@ -75,6 +76,7 @@ public class ConsumerClientImpl implements ConsumerClient {
 
     private void onMessage(Message message) {
         try {
+            System.out.println(Thread.currentThread().getName());
             consumerHandler.consumer(message);
         } catch (Exception e) {
             consumerHandler.retry(message);
@@ -84,30 +86,6 @@ public class ConsumerClientImpl implements ConsumerClient {
     private String getKafkaTopicWithPrefix() {
         String prefix = consumerConfig.getTopicPrefix();
         return prefix + topic;
-    }
-
-    public String getTopic() {
-        return topic;
-    }
-
-    public void setTopic(String topic) {
-        this.topic = topic;
-    }
-
-    public ConsumerConfig getConsumerConfig() {
-        return consumerConfig;
-    }
-
-    public void setConsumerConfig(ConsumerConfig consumerConfig) {
-        this.consumerConfig = consumerConfig;
-    }
-
-    public ConsumerHandler getConsumerHandler() {
-        return consumerHandler;
-    }
-
-    public void setConsumerHandler(ConsumerHandler consumerHandler) {
-        this.consumerHandler = consumerHandler;
     }
 
     private class KafkaConsumerThread implements Runnable {
@@ -142,4 +120,30 @@ public class ConsumerClientImpl implements ConsumerClient {
         }
 
     }
+
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
+
+    public ConsumerConfig getConsumerConfig() {
+        return consumerConfig;
+    }
+
+    public void setConsumerConfig(ConsumerConfig consumerConfig) {
+        this.consumerConfig = consumerConfig;
+    }
+
+    public ConsumerHandler getConsumerHandler() {
+        return consumerHandler;
+    }
+
+    public void setConsumerHandler(ConsumerHandler consumerHandler) {
+        this.consumerHandler = consumerHandler;
+    }
+
 }

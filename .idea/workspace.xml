@@ -7,26 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ffedd79-08c6-441c-b24f-0759c6b073c5" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/logback.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/MessageConverter.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/MessageConverter.java" />
       <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.java" />
       <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/ConsumerHandler.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/ConsumerHandler.java" />
       <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java" afterPath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java" />
+      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ConsumerClientTest.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl$KafkaConsumerThread.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl$KafkaConsumerThread.class" />
       <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.class" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.class" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/convert/MessageConverter.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/convert/MessageConverter.class" />
       <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.class" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.class" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/handle/ConsumerHandler.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/classes/cn/jbricks/module/kafka/handle/ConsumerHandler.class" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/handler/UserConsumerHandler.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/handler/UserConsumerHandler.class" />
-      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/test/ProducerClientTest.class" afterPath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/test/ProducerClientTest.class" />
+      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/cn/jbricks/module/kafka/test/ConsumerClientTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/module/module-kafka0.8/target/test-classes/logback.xml" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,8 +38,8 @@
       <file leaf-file-name="ProducerClientImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+            <state relative-caret-position="160">
+              <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2097#2098#0" expanded="true" />
@@ -58,21 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vcs.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProducerClientTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="231">
+              <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,8 +64,8 @@
       <file leaf-file-name="JsonMessageConverter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="161">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,35 +73,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsumerClientImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java">
+      <file leaf-file-name="MessageConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/MessageConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1143">
-              <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+            <state relative-caret-position="150">
+              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
               <folding>
-                <element signature="e#3198#3199#0" expanded="true" />
-                <element signature="e#3226#3227#0" expanded="true" />
-                <element signature="e#3268#3269#0" expanded="true" />
-                <element signature="e#3302#3303#0" expanded="true" />
-                <element signature="e#3351#3352#0" expanded="true" />
-                <element signature="e#3388#3389#0" expanded="true" />
-                <element signature="e#3456#3457#0" expanded="true" />
-                <element signature="e#3508#3509#0" expanded="true" />
-                <element signature="e#3559#3560#0" expanded="true" />
-                <element signature="e#3597#3598#0" expanded="true" />
-                <element signature="e#3668#3669#0" expanded="true" />
-                <element signature="e#3722#3723#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logback.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/logback.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -128,18 +88,63 @@
       <file leaf-file-name="ConsumerConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/config/ConsumerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="420">
+              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractConsumerHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConsumerClientImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="81" column="31" lean-forward="false" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+              <folding>
+                <element signature="e#4554#4555#0" expanded="true" />
+                <element signature="e#4582#4583#0" expanded="true" />
+                <element signature="e#4624#4625#0" expanded="true" />
+                <element signature="e#4658#4659#0" expanded="true" />
+                <element signature="e#4707#4708#0" expanded="true" />
+                <element signature="e#4744#4745#0" expanded="true" />
+                <element signature="e#4812#4813#0" expanded="true" />
+                <element signature="e#4864#4865#0" expanded="true" />
+                <element signature="e#4915#4916#0" expanded="true" />
+                <element signature="e#4953#4954#0" expanded="true" />
+                <element signature="e#5024#5025#0" expanded="true" />
+                <element signature="e#5078#5079#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserConsumerHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsumerConnector.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.10/0.8.2.2-fix2/kafka_2.10-0.8.2.2-fix2-sources.jar!/kafka/javaapi/consumer/ConsumerConnector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="63" column="27" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractConsumerHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="65" lean-forward="true" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+            <state relative-caret-position="87">
+              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,21 +155,9 @@
       <file leaf-file-name="ConsumerHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/ConsumerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="210">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserConsumerHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -178,6 +171,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>commitOffsets</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -227,14 +225,14 @@
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/config/ConsumerConfig.java" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/kafka.xml" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/MessageConverter.java" />
-        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.java" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java" />
-        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/ConsumerHandler.java" />
+        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.java" />
+        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java" />
+        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java" />
         <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.java" />
-        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/ConsumerHandler.java" />
-        <option value="$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java" />
       </list>
     </option>
   </component>
@@ -373,6 +371,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="riches" type="b2602c69:ProjectViewProjectNode" />
+              <item name="riches" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="module-kafka0.8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
               <item name="convert" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -397,6 +406,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="kafka" type="462c0819:PsiDirectoryNode" />
               <item name="handle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="riches" type="b2602c69:ProjectViewProjectNode" />
+              <item name="riches" type="462c0819:PsiDirectoryNode" />
+              <item name="module" type="462c0819:PsiDirectoryNode" />
+              <item name="module-kafka0.8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="riches" type="b2602c69:ProjectViewProjectNode" />
@@ -505,7 +525,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProducerClientTest.testProducer1">
+  <component name="RunManager" selected="JUnit.ProducerClientTest.testProducer2">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -684,8 +704,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ProducerClientTest.testProducer1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ProducerClientTest.testProducer2" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ProducerClientTest.testProducer2" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ProducerClientTest.testProducer1" />
       </list>
     </recent_temporary>
   </component>
@@ -703,47 +723,56 @@
       <option name="presentableId" value="Default" />
       <updated>1519626211709</updated>
       <workItem from="1519626216232" duration="10624000" />
-      <workItem from="1519659243802" duration="15274000" />
+      <workItem from="1519659243802" duration="17094000" />
     </task>
+    <task id="LOCAL-00001" summary="kafka 框架init">
+      <created>1519750704091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519750704091</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 00h 21m 08s.xml">
+    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 01h 03m 28s.xml">
       <configuration name="ProducerClientTest.testProducer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 00h 23m 24s.xml">
+    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 09h 59m 39s.xml">
       <configuration name="ProducerClientTest.testProducer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 00h 49m 34s.xml">
+    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 10h 00m 35s.xml">
       <configuration name="ProducerClientTest.testProducer1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 00h 51m 44s.xml">
-      <configuration name="ProducerClientTest.testProducer1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 00h 52m 38s.xml">
-      <configuration name="ProducerClientTest.testProducer1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 00h 54m 02s.xml">
-      <configuration name="ProducerClientTest.testProducer1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProducerClientTest_testProducer1 - 2018.02.28 at 00h 54m 37s.xml">
-      <configuration name="ProducerClientTest.testProducer1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 00h 16m 23s.xml">
+    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 10h 01m 29s.xml">
       <configuration name="ProducerClientTest.testProducer2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 00h 19m 45s.xml">
+    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 10h 02m 22s.xml">
       <configuration name="ProducerClientTest.testProducer2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 00h 20m 32s.xml">
+    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 10h 03m 31s.xml">
+      <configuration name="ProducerClientTest.testProducer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 10h 03m 51s.xml">
+      <configuration name="ProducerClientTest.testProducer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 10h 04m 34s.xml">
+      <configuration name="ProducerClientTest.testProducer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 10h 05m 31s.xml">
+      <configuration name="ProducerClientTest.testProducer2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProducerClientTest_testProducer2 - 2018.02.28 at 10h 06m 11s.xml">
       <configuration name="ProducerClientTest.testProducer2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25898000" />
+    <option name="totallyTimeSpent" value="27718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19651741" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -763,8 +792,8 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30472636" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18532339" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20771144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32618025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -811,6 +840,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="kafka 框架init" />
+    <option name="LAST_COMMIT_MESSAGE" value="kafka 框架init" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -821,7 +854,7 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -855,20 +888,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/riches-web/src/main/filter/dev-filter.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/riches-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/riches-web/src/main/resources/beans.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1113,16 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ConsumerClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.8/fastjson-1.2.8-sources.jar!/com/alibaba/fastjson/JSON.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1166,10 +1175,10 @@
         <state relative-caret-position="291">
           <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="false" />
+            <element signature="e#957#958#0" expanded="false" />
+            <element signature="e#1031#1032#0" expanded="false" />
+            <element signature="e#1087#1088#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1187,8 +1196,97 @@
         <state relative-caret-position="452">
           <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="false" />
+            <element signature="e#845#846#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ConsumerClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.10/0.8.2.2-fix2/kafka_2.10-0.8.2.2-fix2.jar!/kafka/javaapi/consumer/ZookeeperConsumerConnector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="115" column="16" lean-forward="false" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
+          <folding>
+            <marker date="1474514100000" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1474514100000" expanded="true" signature="731:5156" ph="@{...}" />
+            <marker date="1474514100000" expanded="false" signature="5471:5482" ph=" { " />
+            <marker date="1474514100000" expanded="false" signature="5501:5507" ph=" }" />
+            <marker date="1474514100000" expanded="false" signature="5543:5554" ph=" { " />
+            <marker date="1474514100000" expanded="false" signature="5580:5586" ph=" }" />
+            <marker date="1474514100000" expanded="false" signature="5654:5665" ph=" { " />
+            <marker date="1474514100000" expanded="false" signature="5688:5694" ph=" }" />
+            <marker date="1474514100000" expanded="false" signature="5744:5755" ph=" { " />
+            <marker date="1474514100000" expanded="false" signature="5788:5794" ph=" }" />
+            <marker date="1474514100000" expanded="true" signature="5956:8377" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="6700:7180" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="6898:7166" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="7213:8335" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="7411:8321" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="7770:8072" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="7930:8046" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="8494:8742" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="8904:9082" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="9199:9465" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="9566:9823" ph="{...}" />
+            <marker date="1474514100000" expanded="true" signature="9856:9867" ph=" { " />
+            <marker date="1474514100000" expanded="true" signature="9905:9911" ph=" }" />
+            <marker date="1474514100000" expanded="false" signature="9966:9977" ph=" { " />
+            <marker date="1474514100000" expanded="false" signature="10025:10031" ph=" }" />
+            <marker date="1474514100000" expanded="false" signature="10059:10070" ph=" { " />
+            <marker date="1474514100000" expanded="false" signature="10099:10105" ph=" }" />
+            <marker date="1474514100000" expanded="true" signature="10191:10430" ph="{...}" />
+            <marker date="1474514100000" expanded="false" signature="10492:10503" ph=" { " />
+            <marker date="1474514100000" expanded="false" signature="10522:10528" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka_2.10/0.8.2.2-fix2/kafka_2.10-0.8.2.2-fix2-sources.jar!/kafka/javaapi/consumer/ConsumerConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="63" column="27" lean-forward="false" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1203,103 +1301,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/config/ConsumerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state relative-caret-position="420">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="83" column="10" lean-forward="true" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/ConsumerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="65" lean-forward="true" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="34" column="21" lean-forward="false" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/convert/impl/JsonMessageConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1143">
-          <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
-          <folding>
-            <element signature="e#3198#3199#0" expanded="true" />
-            <element signature="e#3226#3227#0" expanded="true" />
-            <element signature="e#3268#3269#0" expanded="true" />
-            <element signature="e#3302#3303#0" expanded="true" />
-            <element signature="e#3351#3352#0" expanded="true" />
-            <element signature="e#3388#3389#0" expanded="true" />
-            <element signature="e#3456#3457#0" expanded="true" />
-            <element signature="e#3508#3509#0" expanded="true" />
-            <element signature="e#3559#3560#0" expanded="true" />
-            <element signature="e#3597#3598#0" expanded="true" />
-            <element signature="e#3668#3669#0" expanded="true" />
-            <element signature="e#3722#3723#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ProducerClientImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="56" column="26" lean-forward="true" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="160">
+          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2097#2098#0" expanded="true" />
@@ -1308,11 +1321,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/test/ProducerClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/test/java/cn/jbricks/module/kafka/handler/UserConsumerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/client/impl/ConsumerClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="81" column="31" lean-forward="false" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
+          <folding>
+            <element signature="e#4554#4555#0" expanded="true" />
+            <element signature="e#4582#4583#0" expanded="true" />
+            <element signature="e#4624#4625#0" expanded="true" />
+            <element signature="e#4658#4659#0" expanded="true" />
+            <element signature="e#4707#4708#0" expanded="true" />
+            <element signature="e#4744#4745#0" expanded="true" />
+            <element signature="e#4812#4813#0" expanded="true" />
+            <element signature="e#4864#4865#0" expanded="true" />
+            <element signature="e#4915#4916#0" expanded="true" />
+            <element signature="e#4953#4954#0" expanded="true" />
+            <element signature="e#5024#5025#0" expanded="true" />
+            <element signature="e#5078#5079#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/ConsumerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/module-kafka0.8/src/main/java/cn/jbricks/module/kafka/handle/AbstractConsumerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

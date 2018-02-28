@@ -15,11 +15,13 @@ public abstract class AbstractConsumerHandler<T> implements ConsumerHandler<T> {
 
     private static Logger logger = LoggerFactory.getLogger(AbstractConsumerHandler.class);
 
-    private long retryInterval = 500l;
+    private static long RETRY_INTERVAL = 50l;
+
+    private static int RETRY_COUNT = 3;
 
 
     public boolean isRetry(int count) {
-        if (count < 3) {
+        if (count < RETRY_COUNT) {
             return true;
         }
         return false;
@@ -46,7 +48,7 @@ public abstract class AbstractConsumerHandler<T> implements ConsumerHandler<T> {
 
     private void waitMoment() {
         try {
-            Thread.sleep(retryInterval);
+            Thread.sleep(RETRY_INTERVAL);
         } catch (InterruptedException e) {
         }
     }

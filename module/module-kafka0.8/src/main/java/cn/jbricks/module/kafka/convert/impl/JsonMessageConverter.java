@@ -16,7 +16,6 @@ import java.nio.charset.Charset;
  * @Date: Created in 下午2:57 2018/2/27
  */
 public class JsonMessageConverter implements MessageConverter {
-    public static final Logger logger = LoggerFactory.getLogger(JsonMessageConverter.class);
 
     @Override
     public String toString(Object object) throws UnsupportedEncodingException {
