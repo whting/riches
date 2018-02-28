@@ -11,7 +11,7 @@
 
     <bean class="cn.jbricks.module.kafka.client.impl.ProducerClientImpl" name="producerClient">
         <property name="producerConfig" ref="producerConfig"/>
-        <property name="topic" value="user3" />
+        <property name="topic" value="user5" />
     </bean>
 
     <bean class="cn.jbricks.module.kafka.config.ProducerConfig" name="producerConfig">
@@ -24,7 +24,7 @@
 
     <bean class="cn.jbricks.module.kafka.client.impl.ConsumerClientImpl" name="consumerClient">
         <property name="consumerConfig" ref="consumerConfig" />
-        <property name="topic" value="user3" />
+        <property name="topic" value="user5" />
         <property name="consumerHandler" ref="userConsumerHandler" />
     </bean>
 
@@ -34,6 +34,7 @@
         <property name="retry" value="true"/>
         <property name="topicPrefix" value="test" />
         <property name="zookeeperHost" value="127.0.0.1:2181" />
+        <property name="threadCount" value="8" />
         <property name="messageConverter" ref="messageConverter" />
     </bean>
     <bean class="cn.jbricks.module.kafka.handler.UserConsumerHandler" name="userConsumerHandler"></bean>

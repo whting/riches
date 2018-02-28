@@ -25,6 +25,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
 /**
+ * kafka消费者，此消费者根据分区消费，每个分区一个消费线程
+ *
  * Created by haoting.wang on 2017/2/27.
  */
 public class ConsumerClientImpl implements ConsumerClient {
@@ -39,14 +41,15 @@ public class ConsumerClientImpl implements ConsumerClient {
 
     private ConsumerHandler consumerHandler;
 
-    private static int threadCount = Runtime.getRuntime().availableProcessors();
     // 给线程取名
     private static ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("consumer-%d").setDaemon(true).build();
 
-    private static ExecutorService executor = Executors.newFixedThreadPool(threadCount, threadFactory);
+    private ExecutorService executor;
 
     @PostConstruct
     public void init() {
+        executor = Executors.newFixedThreadPool(consumerConfig.getThreadCount(), threadFactory);
+
         Properties props = new Properties();
         props.put("zookeeper.connect", consumerConfig.getZookeeperHost());
         props.put("group.id", consumerConfig.getGroupId());
@@ -58,7 +61,7 @@ public class ConsumerClientImpl implements ConsumerClient {
         // 连接Kafka
         consumerConnector = kafka.consumer.Consumer.createJavaConsumerConnector(config);
         Map<String, Integer> topicCountMap = new HashMap<>();
-        topicCountMap.put(getKafkaTopicWithPrefix(), threadCount);
+        topicCountMap.put(getKafkaTopicWithPrefix(), consumerConfig.getThreadCount());
         Map<String, List<KafkaStream<byte[], byte[]>>> consumerMap = consumerConnector.createMessageStreams(topicCountMap);
         List<KafkaStream<byte[], byte[]>> streams = consumerMap.get(getKafkaTopicWithPrefix());
 
@@ -145,5 +148,4 @@ public class ConsumerClientImpl implements ConsumerClient {
     public void setConsumerHandler(ConsumerHandler consumerHandler) {
         this.consumerHandler = consumerHandler;
     }
-
 }

@@ -13,4 +13,6 @@ public interface ProducerClient {
     void shutdown();
 
     boolean sendMessage(Message message);
+
+    String getPartitionKey(Message message);
 }

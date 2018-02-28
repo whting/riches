@@ -38,12 +38,13 @@ public class ProducerClientTest {
     @Test
     public void testProducer2() throws InterruptedException {
         Message message = new Message();
-        message.setKey("123");
         message.setMsgId("456");
         User user = new User();
-        user.setName("wht");
         message.setModel(user);
-        for(int i = 0;i<100;i++){
+        for(int i = 0;i<1000;i++){
+            message.setKey(i+"");
+
+            user.setName(i+"");
             producerClient.sendMessage(message);
         }
         Thread.sleep(10000L);

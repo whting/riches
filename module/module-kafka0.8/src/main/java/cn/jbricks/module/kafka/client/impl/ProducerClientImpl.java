@@ -3,7 +3,6 @@ package cn.jbricks.module.kafka.client.impl;
 import cn.jbricks.module.kafka.client.ProducerClient;
 import cn.jbricks.module.kafka.config.ProducerConfig;
 import cn.jbricks.module.kafka.model.Message;
-import com.alibaba.fastjson.JSONObject;
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import org.slf4j.Logger;
@@ -17,6 +16,8 @@ import java.util.Properties;
 import java.util.Random;
 
 /**
+ * kafka生产者，此生产者用与kafka可保证分区有序，根据getPartitionKey()分区
+ * <p>
  * Created by haoting.wang on 2017/2/27.
  */
 public class ProducerClientImpl implements ProducerClient {
@@ -48,7 +49,6 @@ public class ProducerClientImpl implements ProducerClient {
         props.put("compression.codec", "0");    //压缩
         props.put("serializer.class", "kafka.serializer.StringEncoder");
         props.put("key.serializer.class", "kafka.serializer.NullEncoder");
-        props.put("num.partitions", "5");
         kafka.producer.ProducerConfig config = new kafka.producer.ProducerConfig(props);
         producer = new Producer<>(config);
     }
@@ -61,18 +61,28 @@ public class ProducerClientImpl implements ProducerClient {
     @Override
     public boolean sendMessage(Message message) {
         String body = null;
-       // String s = JSONObject.toJSONString(message);
         try {
             body = producerConfig.getMessageConverter().toString(message);
         } catch (UnsupportedEncodingException e) {
             logger.error("[sendMessage]message convert to byte error", e);
             return false;
         }
-        String key = String.valueOf(random.nextLong());
+        String key = getPartitionKey(message);
         KeyedMessage<String, String> keyedMessage = new KeyedMessage(getKafkaTopicWithPrefix(), key, body);
         producer.send(keyedMessage);
 
         return true;
+    }
+
+    @Override
+    public String getPartitionKey(Message message) {
+        String key = message.getKey();
+
+        if (key == null || "".equals(key.trim())) {
+            key = String.valueOf(random.nextLong());
+        }
+        return key;
+
     }
 
     private String getKafkaTopicWithPrefix() {

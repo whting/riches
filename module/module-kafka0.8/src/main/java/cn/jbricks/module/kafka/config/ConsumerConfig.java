@@ -20,6 +20,8 @@ public class ConsumerConfig {
     //是否开启重试
     private boolean retry            = false;
 
+    private int threadCount = 1;
+
 
     private MessageConverter messageConverter;
 
@@ -88,5 +90,13 @@ public class ConsumerConfig {
 
     public void setMessageConverter(MessageConverter messageConverter) {
         this.messageConverter = messageConverter;
+    }
+
+    public int getThreadCount() {
+        return threadCount;
+    }
+
+    public void setThreadCount(int threadCount) {
+        this.threadCount = threadCount;
     }
 }
