@@ -17,23 +17,9 @@ public class ConsumerConfig {
 
     private String  zkSyncTimeMs     = "1000";
 
-    //是否开启重试
-    private boolean retry            = false;
-
     private int threadCount = 1;
 
-
     private MessageConverter messageConverter;
-
-    public boolean isRetry(int count) {
-        if (!retry) {
-            return false;
-        }
-        if (count < 3) {
-            return true;
-        }
-        return false;
-    }
 
     public String getTopicPrefix() {
         return topicPrefix;
@@ -74,15 +60,6 @@ public class ConsumerConfig {
     public void setZkSyncTimeMs(String zkSyncTimeMs) {
         this.zkSyncTimeMs = zkSyncTimeMs;
     }
-
-    public boolean isRetry() {
-        return retry;
-    }
-
-    public void setRetry(boolean retry) {
-        this.retry = retry;
-    }
-
 
     public MessageConverter getMessageConverter() {
         return messageConverter;
