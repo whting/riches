@@ -21,7 +21,7 @@ public abstract class AbstractConsumerHandler<T> implements ConsumerHandler<T> {
 
 
     public boolean isRetry(int count) {
-        if (count <= retryCount) {
+        if (count < retryCount) {
             return true;
         }
         return false;
@@ -29,11 +29,9 @@ public abstract class AbstractConsumerHandler<T> implements ConsumerHandler<T> {
 
     @Override
     public boolean retry(Message message) {
-        int count = 0;
-        while (retryEnable && isRetry(count)) {
+        while (retryEnable && isRetry(message.reconsumer())) {
             waitMoment();
-            count++;
-            logger.info("waring kafka consumer message={},retry={}", JSON.toJSONString(message), count);
+            logger.warn("waring kafka consumer message={}", JSON.toJSONString(message));
             try {
                 consumer(message);
             } catch (Exception e) {

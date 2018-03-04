@@ -55,10 +55,6 @@ public class Message<T> implements Serializable {
         return reconsumeTimes;
     }
 
-    public void setReconsumeTimes(int reconsumeTimes) {
-        this.reconsumeTimes = reconsumeTimes;
-    }
-
     public long getStartDeliverTime() {
         return startDeliverTime;
     }
@@ -66,4 +62,9 @@ public class Message<T> implements Serializable {
     public void setStartDeliverTime(long startDeliverTime) {
         this.startDeliverTime = startDeliverTime;
     }
+
+    public int reconsumer(){
+        return reconsumeTimes++;
+    }
+
 }

@@ -4,11 +4,17 @@ import cn.jbricks.module.kafka.model.Message;
 import cn.jbricks.module.kafka.model.User;
 import cn.jbricks.module.kafka.producer.Producer;
 import cn.jbricks.module.kafka.producer.impl.KafkaProducer;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.Log4jConfigurer;
+
+import java.io.FileNotFoundException;
+import java.util.List;
 
 /**
  * Created by haoting.wang on 2017/2/27.
@@ -16,6 +22,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath*:kafka.xml")
 public class ProducerClientTest {
+
 
     @Autowired
     private Producer producerClient;
@@ -32,7 +39,7 @@ public class ProducerClientTest {
 
         producerClient.sendMessage(message);
 
-        Thread.sleep(1000L);
+        Thread.sleep(10000L);
     }
 
     @Test
@@ -48,6 +55,17 @@ public class ProducerClientTest {
             producerClient.sendMessage(message);
         }
         Thread.sleep(3000L);
+    }
+
+    @Test
+    public void test() throws InterruptedException {
+
+        String str = "['123','12314']";
+
+        List list = JSON.parseObject(str, List.class);
+        System.out.println(list.get(0));
+
+        Thread.sleep(10000l);
     }
 
 
