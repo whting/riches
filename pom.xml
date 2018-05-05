@@ -11,6 +11,7 @@
     <module>riches-user</module>
     <module>riches-generator</module>
     <module>module/module-kafka0.8</module>
+      <module>module/module-kafka0.10</module>
   </modules>
   <packaging>pom</packaging>
 

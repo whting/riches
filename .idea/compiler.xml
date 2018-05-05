@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="module-kafka0.8" />
+        <module name="modulekafka010" />
         <module name="riches-generator" />
         <module name="riches-mvc" />
         <module name="riches-user" />
@@ -15,6 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="module-kafka0.8" target="1.7" />
+      <module name="modulekafka010" target="1.7" />
       <module name="riches" target="1.5" />
       <module name="riches-generator" target="1.5" />
       <module name="riches-mvc" target="1.5" />
