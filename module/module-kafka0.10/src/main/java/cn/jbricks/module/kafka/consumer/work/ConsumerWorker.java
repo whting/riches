@@ -151,17 +151,21 @@ public class ConsumerWorker implements Runnable,DisposableBean {
         try {
 
             if(uncommittedOffsetMap.isEmpty())return ;
+            final Map<TopicPartition, OffsetAndMetadata> committingOffsetMap = new HashMap(uncommittedOffsetMap);
+            resetUncommittedOffsetMap();
 
-            logger.debug("committing the offsets : {}",uncommittedOffsetMap);
-            consumer.commitAsync(uncommittedOffsetMap, new OffsetCommitCallback() {
+            logger.debug("committing the offsets : {}", committingOffsetMap);
+
+            consumer.commitAsync(committingOffsetMap, new OffsetCommitCallback() {
                 @Override
                 public void onComplete(Map<TopicPartition, OffsetAndMetadata> offsets, Exception exception) {
                     //
                     isCommiting = false;
                     if(exception == null){
-                        resetUncommittedOffsetMap();
                         logger.debug("committed the offsets : {}",offsets);
                     }else{
+                        uncommittedOffsetMap.putAll(committingOffsetMap);
+                        uncommittedNums.addAndGet(committingOffsetMap.size());
                         logger.error("committ the offsets error",exception);
                     }
                 }
