@@ -12,6 +12,8 @@ public class ConsumerConfig {
 
     private String servers;
 
+    private String topicPrefix;
+
     private boolean autoCommit = true;
 
     private int rebalanceMaxRetries = 5;
@@ -36,6 +38,22 @@ public class ConsumerConfig {
 
     public void setServers(String servers) {
         this.servers = servers;
+    }
+
+    public String getTopicPrefix() {
+        return topicPrefix;
+    }
+
+    public void setTopicPrefix(String topicPrefix) {
+        this.topicPrefix = topicPrefix;
+    }
+
+    public int getMaxPollRecords() {
+        return maxPollRecords;
+    }
+
+    public void setMaxPollRecords(int maxPollRecords) {
+        this.maxPollRecords = maxPollRecords;
     }
 
     public boolean isAutoCommit() {

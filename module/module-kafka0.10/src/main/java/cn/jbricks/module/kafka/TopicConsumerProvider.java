@@ -4,14 +4,12 @@ import cn.jbricks.module.kafka.consumer.config.ConsumerConfig;
 import cn.jbricks.module.kafka.consumer.handler.ConsumerHandler;
 import cn.jbricks.module.kafka.consumer.thread.StandardThreadExecutor;
 import cn.jbricks.module.kafka.consumer.work.ConsumerWorker;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -60,6 +58,17 @@ public class TopicConsumerProvider implements InitializingBean, DisposableBean {
 
         int poolSize = topicHandlers.values().size();
 
+
+        String topicPrefix = config.getTopicPrefix();
+        if(StringUtils.isNotEmpty(topicPrefix)){
+            Map<String, ConsumerHandler> newTopicHandlers = new HashMap<>();
+            for(Map.Entry<String, ConsumerHandler> entry:topicHandlers.entrySet()){
+                newTopicHandlers.put(warpTopic(entry.getKey()),entry.getValue());
+            }
+            topicHandlers = newTopicHandlers;
+        }
+
+
         fetchExecutor = new StandardThreadExecutor(poolSize, poolSize, 0, TimeUnit.SECONDS, poolSize, new StandardThreadExecutor.StandardThreadFactory("KafkaFetcher"));
         ;
 
@@ -96,4 +105,14 @@ public class TopicConsumerProvider implements InitializingBean, DisposableBean {
     public void setTopicHandlers(Map<String, ConsumerHandler> topicHandlers) {
         this.topicHandlers = topicHandlers;
     }
+
+
+    private String warpTopic(String topic){
+        if(StringUtils.isEmpty(config.getTopicPrefix())){
+            return topic;
+        }
+        return config.getTopicPrefix()+"."+topic;
+    }
+
+
 }

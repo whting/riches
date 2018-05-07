@@ -64,7 +64,8 @@ public class TopicProducerProvider implements InitializingBean, DisposableBean {
     }
 
 
-    public boolean publish(final String topicName, final KafkaMessage message) {
+    public boolean publish(String topicName, final KafkaMessage message) {
+        topicName = warpTopic(topicName);
         return publish(topicName,message,defaultAsynSend);
     }
 
